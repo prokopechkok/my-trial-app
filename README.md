@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Front-End School 2.0 / Кейсове завдання
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Перш ніж розпочати роботу над кейсом, ознайомся, будь ласка, з основними **організаційними деталями** цього етапу відбору.
 
-## Available Scripts
+### **Важлива інформація**
 
-In the project directory, you can run:
+- Дедлайн здачі кейсового завдання: **19 березня, 23:59.**
+- Виконаний кейс **необхідно завантажити на GitHub**. Посилання на репозиторій з  готовим проєктом **надсилай у Google-форму** — [https://forms.gle/qe3f3QBwCtMuptH86](https://forms.gle/qe3f3QBwCtMuptH86)
+- В GitHub, окрім проєкту, ти можеш додавати коментарі чи опис логіки виконання  роботи в README.md документі. Правильна логіка може стати перевагою при  оцінюванні, якщо ти не повністю виконаєш завдання.
+- Очікувані мови виконання завдання: JavaScript, TypeScript.
+- Виконувати завдання іншими мовами можна, проте, це не буде перевагою. В роботі  можна використовувати будь-який фреймворк/бібліотеку. Буде плюсом Vue, React,  Angular.
+- Ти можеш користуватися усією доступною інформацією, але виконуй завдання  самостійно.
 
-### `npm start`
+<aside>
+💡 **Опис завдання**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Твоя задача — створити застосунок для навчання. Для цього вже підготовлено API —[https://www.postman.com/aninix/workspace/genesis-front-end-school/overview](https://www.postman.com/aninix/workspace/genesis-front-end-school/overview), його необхідно буде форкнути у свій акаунт postman та можна працювати.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Застосунок має гарно виглядати, але для інженера код важливіший. Тому можна вільно використати готові UI-бібліотеки. На ваш розсуд, які дані ви будете показувати користувачу.
 
-### `npm test`
+Додаток містить дві сторінки:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- сторінка з курсами;
+- сторінка з переглядом курсу;
 
-### `npm run build`
+Детально про сторінки:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- В стрічці з курсами необхідно відобразити останні 10 курсів. Курс містить:
+  - Фото курсу.
+  - Заголовок курсу.
+  - Кількість уроків, навички та рейтинг.
+  - На сторінці виводимо 10 курсів і додаємо пагінацію.
+  - Додатково:
+    - при ховері відтворювати відео без звуку.
+- На сторінці з переглядом курсу відображається перше відео з даного курсу, деталі про курс та список уроків:
+  - При кліку на урок (якщо він не заблокований) для перегляду відкриється поточне відео, користувач повинен розуміти, який урок з курсу переглядає.
+  - Необхідно зберігати прогрес перегляду відео та уроку курсу (зберігати локально).
+  - Якщо урок заблокований показати це користувачу.
+  - Додатково:
+    1. Зробити функціонал picture in picture (без сторонніх бібліотек):
+       - Відео можна вивести поверх сторінки при кліку. При цьому відео знаходиться у правому нижньому куті сторінки й можна ходити по інших сторінках.
+    2. Додати зміну швидкості програвання відео через клавіатуру (без сторонніх бібліотек) (комбінація клавіш на власний розсуд):
+       - Так же вивести інформацію біля відео як цим користуватись.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Додаткові завдання:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- пропрацювати помилки від API (помилка мережі, ...);
+- адаптив під мобільну версію;
+- анімація завантаження відео;
+- код покритий тестами;
 
-### `npm run eject`
+Технічні деталі:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Щоб показати зображення:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- для курсу: `previewImageLink + '/cover.webp'`
+- для уроку: `previewImageLink + '/' + lesson.order + '.webp'`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_( ${previewImageLink}/lesson-${order}.webp.)_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+В реалізації використовувати стандартний відеоплеєр.
 
-## Learn More
+</aside>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**UPD:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Ми помітили проблеми і труднощі, які трапляються при виконанні кейсового завдання._
 
-### Code Splitting
+_Можливо, для деяких з них будуть корисними наші доповнення та рекомендації:_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+_1. При роботі з відео рекомендуємо користуватись hls.js._
 
-### Analyzing the Bundle Size
+_2. Проблема з CORS може виникати на сторонніх браузерах. Працювати буде тільки з localhost._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_3. Якщо проблема з блокуванням CORS продовжується, то можна в Chrome встановити розширення: https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf_
 
-### Making a Progressive Web App
+_І увімкнути його, як на скріні. На Safari повинен працювати._
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![photo_2023-03-15 16.26.35.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9e69160a-e612-4a40-b209-89ad145831c6/photo_2023-03-15_16.26.35.jpeg)
 
-### Advanced Configuration
+**_Твій розв’язок має бути якісним. Постарайся викластись на максимум. Але якщо ти не  встигаєш зробити усі додаткові пункти — надсилай роботу — ми перевіримо._**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Якщо виникнуть питання організаційного характеру — пиши нам в [Telegram](https://t.me/Genesis_Academy) або ж на пошту academy@gen.tech.

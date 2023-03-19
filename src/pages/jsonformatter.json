@@ -1,0 +1,20 @@
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "Soup cooking",
+    "previewImageLink": "https://gomoneymom.com/wp-content/uploads/2022/08/pumpkin-soup-2.png",
+    "lessonCount": 5,
+    "rating": "4/5",
+    "skills": "Miso soups, Broth soups, Consommes,Cream Soups"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "Pasta cooking",
+    "previewImageLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foodandwine.com%2Frecipes%2Fcreamy-tomato-rigatoni&psig=AOvVaw0aqooZJfc3uN5Cb3x_d9rt&ust=1679243736243000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJD067f05f0CFQAAAAAdAAAAABAE",
+    "lessonCount": 8,
+    "rating": "5/5",
+    "skills": "Spaghetti, Fettuccine, Linguine"
+  }
+]
